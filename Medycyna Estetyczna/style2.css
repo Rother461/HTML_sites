@@ -1,0 +1,340 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+html,body {
+    font-family: 'Poppins', sans-serif;
+	   margin:0;
+		       padding:0;
+		       height:100%;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #999;
+}
+
+
+a:hover,
+a:focus {
+    color: white;
+    transition: all 0.4s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 1;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 2s;
+	border-right:2px solid black;
+	
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #7386D5;
+	text-align:center;
+}
+#sidebar .sidebar-header a {
+    padding: 20px;
+    background: #7386D5;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+}
+
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+	color: white;
+	 text-decoration: none;
+}
+#sidebar ul li.active>a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #7386D5;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 20px; 
+    padding-left: 30px ;
+    background: #6d7fcc;
+	 color: white;
+}
+.stopka
+{
+ min-height: 8vh;
+ max-height:8vh;
+        text-align: center;
+		border-top:2px solid;
+		width:100%;
+	
+}
+       
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+	background-color:#D0DDE8;
+	color:black;
+}
+#content p
+{
+	color:black;
+}
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=number]
+{
+	width: 40%;
+	background-color: white;
+	color: black;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=time]:focus,
+input[type=number]:focus
+{
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	border: 2px solid 	#000000;
+	background-color: 	#C0C0C0;
+	color:white;
+}
+
+input[type=submit]
+{
+width: 40%;
+	background-color: grey;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: 0.5px solid black;
+	 box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+	font-weight:bold;
+      
+}
+
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+}
+.form
+{
+	text-align:center;
+	position:relative;
+	margin-top:8%;
+	font-size:20px;
+	font-weight:bold;
+}
+.form>p
+{
+	text-align:center;
+	margin-top:4%;
+}
+.form>a
+{
+	font-size:20px;
+	font-weight:bold;
+}
+.prawo
+{
+	width:50%;
+	float:right;
+
+}
+.lewo
+{
+	width:50%;
+	float:left;
+	
+}
+
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+	input[type=text],
+
+input[type=number]
+{
+	width: 70%;
+	background-color: white;
+	color: black;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=time]:focus,
+input[type=number]:focus
+{
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0,0.6);
+	border: 2px solid 	#000000;
+	background-color: 	#C0C0C0;
+	color:white;
+}
+
+input[type=submit]
+{
+width: 70%;
+	background-color: grey;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: 0.5px solid black;
+	 box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+	font-weight:bold;
+      
+}
+
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.7);
+}
+input[type=date],
+input[type=time]
+{
+	width: 80%;
+	background-color: white;
+	color: black;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+.form
+{
+	text-align:center;
+	position:relative;
+	margin-top:8%;
+	font-size:20px;
+	font-weight:bold;
+}
+.form>p
+{
+	text-align:center;
+	margin-top:4%;
+}
+.form>a
+{
+	font-size:20px;
+	font-weight:bold;
+}
+.prawo
+{
+	width:50%;
+	float:right;
+
+}
+.lewo
+{
+	width:50%;
+	float:left;
+	
+}
+
+}
